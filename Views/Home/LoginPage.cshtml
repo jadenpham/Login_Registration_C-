@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    @model UserLog
+    <div>
+        <h1>Login to this Cool Site!</h1>
+        <a href="/">Register</a>
+    </div>
+
+    <div>
+        <form asp-controller="Home" asp-action="VerifyLogin" method="post">
+            <h3>Email</h3>
+            <span asp-validation-for="Email"></span>
+            <input type="text" name="Email">
+
+            <h3>Password</h3>
+            <span asp-validation-for="Password"></span>
+            <input type="password" name="Password">
+            <button>Login</button>
+        </form>
+    </div>
+</body>
+</html>
